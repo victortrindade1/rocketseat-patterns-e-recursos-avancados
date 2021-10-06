@@ -118,8 +118,8 @@ export default new AppointmentController();
 ## src/app/services/CreateAppointmentService.js
 
 - Services precisam estar isolados de `req` e `res`. Vamos eliminá-los então!
-- A informação de req eu passei sendo um objeto como parâmetro ({ user_id: req.userId }). Não precisaria ser um objeto. O bom de ser, é q dou nomes às variáveis. Assim, fica limpo passar user_id apenas.
-- Onde tinha `res`, agora vai dar um simples `throw new Error()`, q possui o mesmo efeito
+- A informação de req eu passei sendo um objeto como parâmetro (`{ user_id: req.userId }`). Não precisaria ser um objeto. O bom de ser, é q dou nomes às variáveis. Assim, fica limpo passar user_id apenas.
+- Onde tinha `res.status(400)`, agora vai dar um simples `throw new Error()`, q possui o mesmo efeito
 - Acrescentou um return. Todo service retorna alguma coisa.
 
 ```js
